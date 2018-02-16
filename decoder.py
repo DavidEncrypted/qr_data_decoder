@@ -11,7 +11,7 @@ numlist = []
 print "Start decoding\n"
 print "----------------------"
 
-with closing(VideoSequence("qrvideo.mp4")) as frames:
+with closing(VideoSequence("ulti.mp4")) as frames:
 	print "Decoding: ", len(frames), " frames\n\n"
 	curframe = 0
 	bar = progressbar.ProgressBar(maxval=len(frames), widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
@@ -20,6 +20,8 @@ with closing(VideoSequence("qrvideo.mp4")) as frames:
 		frame = frames[curframe]
 		frame = ImageEnhance.Sharpness(frame)
 		frame = frame.enhance(4.0)
+		frame = ImageEnhance.Brightness(frame)
+		frame = frame.enhance(1.0)
 		
 		data = decode(frame , symbols=[ZBarSymbol.QRCODE])
 		for i in range(0,len(data)):
