@@ -2,12 +2,39 @@ from PIL import Image
 from contextlib import closing
 from videosequence import VideoSequence
 import progressbar
+import argparse
 from PIL import ImageEnhance
 numlist = []
 import subprocess
 
-print "Start decoding\n"
-print "----------------------"
+
+parser = argparse.ArgumentParser(description="QR Code data reconstructor - made by David Schep, Encrypted. Inspired by prodicode and bg-wa");
+parser.add_argument("video", help="Video file containing QR codes",
+                    type=str);
+parser.add_argument("output", help="The file to output the data to. (output is in base64)",
+                    type=str)
+args = parser.parse_args();
+
+
+print("""\
+
+
+   ____  _____  _____  ______ _____ ____  _____  ______ _____  
+  / __ \|  __ \|  __ \|  ____/ ____/ __ \|  __ \|  ____|  __ \ 
+ | |  | | |__) | |  | | |__ | |   | |  | | |  | | |__  | |__) |
+ | |  | |  _  /| |  | |  __|| |   | |  | | |  | |  __| |  _  / 
+ | |__| | | \ \| |__| | |___| |___| |__| | |__| | |____| | \ \ 
+  \___\_\_|  \_\_____/|______\_____\____/|_____/|______|_|  \_\
+                                                               
+                                                                      
+        by David Schep ;)
+        https://github.com/DavidEncrypted
+
+""");
+
+
+
+print "Decoding Started!\n"
 
 dataset = set()
 
@@ -19,7 +46,7 @@ with closing(VideoSequence("hak5qr.mp4")) as frames:
 	while curframe < len(frames):
 		frame = frames[curframe]
 		frame.save("curframe.jpg")
-		#print curframe
+		
 		try:
 			result = subprocess.check_output(["zbarimg","curframe.jpg"], stderr=subprocess.STDOUT)
 		except:
