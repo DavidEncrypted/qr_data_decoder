@@ -1,7 +1,7 @@
-var qr_string_size = 150;
+var qr_string_size = 169;
 var qr_image_size = 200;
 var playback_delay = 150;
-var playback_amount = 18;
+var playback_amount = 10;
 
 // This method converts the selected file to base64, then chunks up the string based on the specified
 // qr_sting size (Note: the larger the chunk size the larger you'll need to set the qr_image_size).
