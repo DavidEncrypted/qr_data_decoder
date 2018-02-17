@@ -1,9 +1,8 @@
-from PIL import Image
+from PIL import Image, ImageEnhance
 from contextlib import closing
 from videosequence import VideoSequence
 import progressbar
 import argparse
-from PIL import ImageEnhance
 numlist = []
 import subprocess
 
