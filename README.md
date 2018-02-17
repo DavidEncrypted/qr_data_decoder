@@ -1,5 +1,3 @@
-# qr_data_decoder
-
 # Qr Data Decoder
 by David Schep
 
