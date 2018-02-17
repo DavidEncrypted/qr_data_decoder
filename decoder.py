@@ -11,7 +11,7 @@ numlist = []
 print "Start decoding\n"
 print "----------------------"
 
-with closing(VideoSequence("bigbig.mp4")) as frames:
+with closing(VideoSequence("qrvideo.mp4")) as frames:
 	print "Decoding: ", len(frames), " frames\n\n"
 	curframe = 0
 	bar = progressbar.ProgressBar(maxval=len(frames), widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
