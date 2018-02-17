@@ -11,7 +11,6 @@ sudo apt-get install zbar-tools
 sudo pip install videosequence
 sudo apt install gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0 python-gi python3-gi
 sudo pip install pillow
-sudo pip install 
 
 (if on Ubuntu:
 sudo apt install libgstreamer1.0-dev gstreamer1.0-plugins-good
