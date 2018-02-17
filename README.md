@@ -7,4 +7,11 @@ Both the payload html and js are originaly from bg-wa: https://github.com/bg-wa/
 ### Installing
 ```
 git clone https://github.com/DavidEncrypted/qr_data_decoder
+
+...
+a bunch of other stuff (TO-DO)
+```
+### Usage
+```
+decoder.py (videofile) (outpufile.txt)
 ```
