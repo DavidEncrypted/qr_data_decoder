@@ -16,3 +16,27 @@ sudo apt-get install gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0 python-gi 
 ```
 decoder.py (videofile) (outpufile.txt)
 ```
+Usage of QR generator:
+Open Payload/index.html in any browser
+Select file to encode
+bg-wa's javascript will generate the qr codes
+Use the playback function to play the qr codes back
+
+The generator script was edited slightly:
+1. The playback now plays more than 1 qr at a time
+2. All QRs have a number in front of the encoded data, this is very helpfull for the decoding
+
+How many QRs should be played back at a time and how fast can be adjusted in main.js
+Recommended parameters:
+
+var qr_string_size = 169; //This value makes sure all qr codes use as all their data. More data per QR = Less QR's total
+var qr_image_size = 200;
+var playback_delay = 150; //150 has had the best results
+var playback_amount = 10; //10 has had the best results
+
+150 ms between QRs was the must reliable but still very fast. Remember to be able to decode the original file, 0% of QR codes can be missing. So if the recording was of a bad quality the decoder wont be able to find all QRs.
+Tips:
+Try to record the QRs in such a way that they fill the entire vieuwfinder.
+The higher quality the recording had the more succesfull the decoding will be
+A higher refreshrate might increase succes. But personally experimenting with this has not been very succesfull
+If you are capable of recording in very high resolution, it might be posible to record more that 10 QRs at a time. maybe a grid of 3 x 8 to fill the entire screen.
