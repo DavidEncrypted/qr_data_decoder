@@ -38,9 +38,9 @@ var playback_amount = 10; //10 has had the best results
 150 ms between QRs was the must reliable but still very fast. Remember to be able to decode the original file, 0% of QR codes can be missing. So if the recording was of a bad quality the decoder wont be able to find all QRs.
 
 Tips:
-```
-Try to record the QRs in such a way that they fill the entire vieuwfinder.
-The higher quality the recording had the more succesfull the decoding will be
-A higher refreshrate might increase succes. But personally experimenting with this has not been very succesfull
-If you are capable of recording in very high resolution, it might be posible to record more that 10 QRs at a time. maybe a grid of 3 x 8 to fill the entire screen.
-```
+
+1.Try to record the QRs in such a way that they fill the entire vieuwfinder.
+2.The higher quality the recording had the more succesfull the decoding will be
+3.A higher refreshrate might increase succes. But personally experimenting with this has not been very succesfull
+4.If you are capable of recording in very high resolution, it might be posible to record more that 10 QRs at a time. maybe a grid of 3 x 8 to fill the entire screen.
+
