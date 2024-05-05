@@ -1,6 +1,8 @@
 # Qr Data Decoder
 by David Schep
 
+Exfiltrate data from an airgapped machine by displaying the data as base64 encoded qrcodes. QRcodes will be flashed on the display, film the display with any camera. Extract the data later.
+
 Inspired by the community project Optical Data exfiltration from Hak5
 Both the payload html and js are originaly from bg-wa: https://github.com/bg-wa/QRExtractor
 
